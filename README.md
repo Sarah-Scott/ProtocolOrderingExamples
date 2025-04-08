@@ -20,13 +20,19 @@ git@github.com:Sarah-Scott/AttestationProtocolOrdering.git
 and follow the build instructions in the README.md to install 
 a local version of the library.
 
+
+Download the Copland Collection at
+https://ku-sldg.github.io/copland/resources/copland-collection.tgz
+and follow the installation instructions in the README.md to install
+Chase and the Copland theory.
+
 ### Provided Examples
 Generate and compile the provided examples with:
 ```
 (cd scripts/ ; bash setup.sh <foldername>)
 make
 ```
-Option for `<foldername>` is *examples*. 
+Option for `<foldername>` is *ordering* and *confining*. 
 
 The Chase output in XHTML can be found in the `<foldername>/chase-outputs` 
 directory. The attack trees in Coq can be found in the `<foldername>` directory.
@@ -66,7 +72,21 @@ Options for `<libname>` are *attacktree*, *attacktree_normalization*, *attacktre
 ## Documentation
 
 ### Scripts
-Todo
+All scripts are unverified and contain only crude error handling. They are intended only
+as a convenience.
+
+`xhtml2coq.py`: Python script to convert Chase output in XHMTL to attack trees in Coq.
+
+`getAttacks.sh`: Bash script to find and convert attacks of a specified protocol.
+
+`getAllAttacks.sh`: Bash script to find and convert attacks of all protocols.
+
+`genCoqProject.py`: Python script to generate a _CoqProject file for a given foldername.
+
+`setup.sh`: Bash script to get all attacks and generate _CoqProject.
+
 
 ### Provided Examples
-Todo
+`ordering`: Examples used in "Ordering Attestation Protocols".
+
+`confining`: Examples used in "Confining Adversary Actions via Measurement",
